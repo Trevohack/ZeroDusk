@@ -1,7 +1,7 @@
 
 /* 
 
-Author: Aquains (ChrisPitchard) full credit goes to him 
+Author: aquinas_nz (ChrisPitchard) full credit goes to him
 
 */ 
 
